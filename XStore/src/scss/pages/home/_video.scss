@@ -1,0 +1,48 @@
+@use "../../utils/variable" as *;
+@use "../../utils/mixin" as *;
+@use "../../utils/extend" as *;
+@use "../../utils/function" as *;
+@use "../../utils/keyFrames" as *;
+
+#video {
+  margin-top: 40px;
+  margin-bottom: 70px;
+  padding: 150px 0px 0px 0px;
+  @include bg-img(cover, repeat-x, top center);
+  .video_outer {
+    animation-name: translate-3;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+  .outer {
+    .content {
+      &__info {
+        h2 {
+          font-size: $fs-800;
+          font-weight: 600;
+        }
+        h3 {
+          font-size: 30px;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .video_outer {
+      text-align: center;
+    }
+    .content {
+      justify-content: center;
+    }
+    h2,
+    h3,
+    p,
+    .content__buttons__button {
+      text-align: center;
+    }
+  }
+}

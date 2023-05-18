@@ -1,0 +1,6 @@
+@use "./../utils/_variable" as *;
+@use "../utils/mixin";
+
+.p-wrap {
+  padding: 15px;
+}

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XStore</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../src/css/style.css" />
+  </head>
+  <body>
+    <header class="bg-white">
+      <nav class="navbar-top d-lg-block d-sm-none">
+        <div class="container-xxl">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="logo">
+                <a href="#" class="d-inline-block">
+                  <img src="../src/assets/Logo.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="list">
+                <ul class="list__group">
+                  <li class="list__group__item active">
+                    <a href="#">Home</a>
+                  </li>
+                  <li class="list__group__item">
+                    <a href="#">About Us</a>
+                  </li>
+                  <li class="list__group__item">
+                    <a href="#">Elements</a>
+                  </li>
+                  <li class="list__group__item">
+                    <a href="#">Pricing</a>
+                  </li>
+                  <li class="list__group__item">
+                    <a href="#">Blog</a>
+                  </li>
+                  <li class="list__group__item">
+                    <a href="#">Contact Us</a>
+                  </li>
+                  <div class="line"></div>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="buttons">
+                <div class="buttons__login">
+                  <button class="buttons__login__button">
+                    <span class="buttons__login__button__icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-shield-lock-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm0 5a1.5 1.5 0 0 1 .5 2.915l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99A1.5 1.5 0 0 1 8 5z"
+                        />
+                      </svg>
+                    </span>
+                    Login
+                  </button>
+                </div>
+                <div class="buttons__register">
+                  <button
+                    class="buttons__register__button text-capitalize rounded-2"
+                  >
+                    get started
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar-bottom_resp d-lg-none d-sm-block">
+        <div class="navbar-bottom_resp__top bg-white">
+          <div class="container-xxl">
+            <div class="row">
+              <div class="col-3">
+                <div class="sidebar_icon">
+                  <button><i class="fa-solid fa-bars"></i></button>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="logo">
+                  <a href="#" class="d-inline-block">
+                    <img src="../src/assets/Logo.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="sidebar_icon justify-content-end">
+                  <button><i class="fa-solid fa-user"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-bottom_resp__bottom bg-white">
+          <div class="container-md">
+            <div class="row">
+              <div class="col-3">
+                <div class="home">
+                  <a class="items" href="#">
+                    <span><i class="bi bi-house-door"></i></span>
+                    <span>Home</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="shop">
+                  <a class="items" href="#">
+                    <span><i class="bi bi-shop-window"></i></span>
+                    <span>Shop</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="__card">
+                  <a class="items" href="#">
+                    <span><i class="bi bi-bag"></i></span>
+                    <span>Card</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="more">
+                  <a class="items" href="#">
+                    <span><i class="bi bi-three-dots"></i></span>
+                    <span>More</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section
+        id="main"
+        style="background-image: url(../src/assets/02-BANNER-1.jpeg)"
+      >
+        <div class="container-xxl">
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="outer">
+                <div class="content">
+                  <div class="content__info">
+                    <h1>XStore Elementor SEO Agency Demo</h1>
+                    <h2>Boost Your <span>SEO Traffic</span></h2>
+                    <p>
+                      It’s time to make your business grow more. Get to the top
+                      of Google’s 1st page with XStore agency.
+                    </p>
+                  </div>
+                  <div class="content__buttons">
+                    <div class="content__buttons__button">
+                      <button class="content__buttons__button__default-btn">
+                        <span>Free Consultation</span>
+                      </button>
+                    </div>
+                    <div class="content__buttons__button">
+                      <button class="content__buttons__button__play-btn">
+                        <span
+                          ><img src="../src/assets/Play-button.svg" alt=""
+                        /></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="img_outer">
+                <div class="img_outer__holder">
+                  <div class="img_outer__holder__img">
+                    <img src="../src/assets/Group-48.svg" alt="" />
+                  </div>
+                  <div class="img_outer__holder__img">
+                    <img src="../src/assets/Group-46.svg" alt="" />
+                  </div>
+                  <div class="img_outer__holder__img">
+                    <img src="../src/assets/Group-49.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="sponsors">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="sponsor_list">
+                <ul class="sponsor_list__items">
+                  <li>
+                    <a href="#">
+                      <img src="../src/assets/Item-1.svg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../src/assets/Item-2.svg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../src/assets/Item-3.svg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../src/assets/Item-4.svg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../src/assets/Item-5.svg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../src/assets/Item-1.svg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../src/assets/Item-4.svg" alt="" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-12">
+              <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="#">
+                      <img src="../src/assets/Item-1.svg" alt="..." />
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#">
+                      <img src="../src/assets/Item-2.svg" alt="..." />
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#">
+                      <img src="../src/assets/Item-3.svg" alt="..." />
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#">
+                      <img src="../src/assets/Item-4.svg" alt="..." />
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#">
+                      <img src="../src/assets/Item-5.svg" alt="..." />
+                    </a>
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    style="background-image: url(../src/assets/back.png)"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    style="background-image: url(../src/assets/next.png)"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="process">
+        <div class="container-xxl">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="outer">
+                <div class="content">
+                  <div class="content__info">
+                    <p>XStore Elementor SEO Agency Demo</p>
+                    <h2 class="mb-4">
+                      What Makes An SEO Agency <span>Successful?</span>
+                    </h2>
+                    <p>
+                      With a knowledgeable team, a good amount of patience, and
+                      trusted plan of action, an SEO campaign can see the result
+                      you need & want. Give your business the platform it
+                      deserves with XStore SEO.
+                    </p>
+                  </div>
+                  <div class="content__buttons">
+                    <a href="#">
+                      Learn More
+                      <span>
+                        <i
+                          class="fa-solid fa-chevron-right"
+                          aria-hidden="true"
+                        ></i>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="processes">
+                <div class="processes__item">
+                  <div class="processes__item__img">
+                    <span>
+                      <i class="fa-regular fa-circle-dot"></i>
+                    </span>
+                  </div>
+                  <h4>The Strategy</h4>
+                  <p>
+                    The success of an SEO campaign relies on the strength of the
+                    strategy. Without guidance of well-throughout.
+                  </p>
+                </div>
+                <div class="processes__item">
+                  <div class="processes__item__img">
+                    <span>
+                      <i class="fa-regular fa-circle-dot"></i>
+                    </span>
+                  </div>
+                  <h4>The Strategy</h4>
+                  <p>
+                    The success of an SEO campaign relies on the strength of the
+                    strategy. Without guidance of well-throughout.
+                  </p>
+                </div>
+                <div class="processes__item">
+                  <div class="processes__item__img">
+                    <span>
+                      <i class="fa-regular fa-circle-dot"></i>
+                    </span>
+                  </div>
+                  <h4>The Strategy</h4>
+                  <p>
+                    The success of an SEO campaign relies on the strength of the
+                    strategy. Without guidance of well-throughout.
+                  </p>
+                </div>
+                <div class="processes__item">
+                  <div class="processes__item__img">
+                    <span>
+                      <i class="fa-regular fa-circle-dot"></i>
+                    </span>
+                  </div>
+                  <h4>The Strategy</h4>
+                  <p>
+                    The success of an SEO campaign relies on the strength of the
+                    strategy. Without guidance of well-throughout.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="booking">
+        <div class="container-xxl">
+          <div class="row">
+            <div class="col-12">
+              <div
+                class="bg_element p-wrap"
+                style="background-image: url(../src/assets/Box-min.png)"
+              >
+                <div class="bg_element__outer">
+                  <div class="bg_element__outer__content p-wrap">
+                    <h2 class="m-0">Book A FREE SEO Consultation Call</h2>
+                    <p class="m-0">
+                      We’ll show you how to increase organic traffic and sales.
+                    </p>
+                  </div>
+                  <div class="bg_element__outer__button">
+                    <button>
+                      <span class="span">
+                        Book Your Call
+                        <span>
+                          <i
+                            class="fa-solid fa-chevron-right"
+                            aria-hidden="true"
+                          ></i> </span
+                      ></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="video"
+        style="background-image: url(../src/assets/06-VIDEO-BOX.png)"
+      >
+        <div class="container-xxl">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="video_outer">
+                <a href="#" class="video_outer__img">
+                  <img src="../src/assets/Video.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="outer">
+                <div class="content">
+                  <div class="content__info">
+                    <h2>
+                      A Phenomenal
+                      <span class="d-inline">250% Increase In Traffic...</span>
+                    </h2>
+                    <h3>within just 1 months…</h3>
+                    <p>
+                      Get more leads and sales than your business can handle
+                      with insanely good SEO and Increasing conversion with SEO.
+                    </p>
+                  </div>
+                  <div class="content__buttons">
+                    <div class="content__buttons__button">
+                      <button class="content__buttons__button__default-btn">
+                        <span>View Case Study</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="services">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="head">
+                <h2>SEO Services <span>That Help You!</span></h2>
+                <p>Just some of the ways we can help your business…</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cards">
+              <div class="cards__outter">
+                <div class="cards__outter__card bg-white">
+                  <div class="cards__outter__card__icon">
+                    <span><i class="bi bi-bar-chart"></i></span>
+                  </div>
+                  <h3>Improve Rankings</h3>
+                  <p>
+                    The point using lorem ipsum that it have often more-or-less
+                    normal distribution of the letter.
+                  </p>
+                  <div class="cards__outter__card__link">
+                    <a href="#">
+                      Learn More
+                      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="cards__outter__card">
+                  <div class="cards__outter__card__icon">
+                    <span><i class="bi bi-filter"></i></span>
+                  </div>
+                  <h3>Improve Rankings</h3>
+                  <p>
+                    The point using lorem ipsum that it have often more-or-less
+                    normal distribution of the letter.
+                  </p>
+                  <div class="cards__outter__card__link">
+                    <a href="#">
+                      Learn More
+                      <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="cards__outter">
+                <div class="cards__outter__card bg-white">
+                  <div class="cards__outter__card__icon">
+                    <span><i class="bi bi-bar-chart"></i></span>
+                  </div>
+                  <h3>Improve Rankings</h3>
+                  <p>
+                    The point using lorem ipsum that it have often more-or-less
+                    normal distribution of the letter.
+                  </p>
+                  <div class="cards__outter__card__link">
+                    <a href="#">
+                      Learn More
+                      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="cards__outter__card">
+                  <div class="cards__outter__card__icon">
+                    <span><i class="bi bi-filter"></i></span>
+                  </div>
+                  <h3>Improve Rankings</h3>
+                  <p>
+                    The point using lorem ipsum that it have often more-or-less
+                    normal distribution of the letter.
+                  </p>
+                  <div class="cards__outter__card__link">
+                    <a href="#">
+                      Learn More
+                      <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="cards__outter">
+                <div class="cards__outter__card bg-white">
+                  <div class="cards__outter__card__icon">
+                    <span><i class="bi bi-bar-chart"></i></span>
+                  </div>
+                  <h3>Improve Rankings</h3>
+                  <p>
+                    The point using lorem ipsum that it have often more-or-less
+                    normal distribution of the letter.
+                  </p>
+                  <div class="cards__outter__card__link">
+                    <a href="#">
+                      Learn More
+                      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="cards__outter__card">
+                  <div class="cards__outter__card__icon">
+                    <span><i class="bi bi-filter"></i></span>
+                  </div>
+                  <h3>Improve Rankings</h3>
+                  <p>
+                    The point using lorem ipsum that it have often more-or-less
+                    normal distribution of the letter.
+                  </p>
+                  <div class="cards__outter__card__link">
+                    <a href="#">
+                      Learn More
+                      <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="cards__outter">
+                <div class="cards__outter__card bg-white">
+                  <div class="cards__outter__card__icon">
+                    <span><i class="bi bi-bar-chart"></i></span>
+                  </div>
+                  <h3>Improve Rankings</h3>
+                  <p>
+                    The point using lorem ipsum that it have often more-or-less
+                    normal distribution of the letter.
+                  </p>
+                  <div class="cards__outter__card__link">
+                    <a href="#">
+                      Learn More
+                      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="cards__outter__card">
+                  <div class="cards__outter__card__icon">
+                    <span><i class="bi bi-filter"></i></span>
+                  </div>
+                  <h3>Improve Rankings</h3>
+                  <p>
+                    The point using lorem ipsum that it have often more-or-less
+                    normal distribution of the letter.
+                  </p>
+                  <div class="cards__outter__card__link">
+                    <a href="#">
+                      Learn More
+                      <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="cards__outter">
+                <div class="cards__outter__card bg-white">
+                  <div class="cards__outter__card__icon">
+                    <span><i class="bi bi-bar-chart"></i></span>
+                  </div>
+                  <h3>Improve Rankings</h3>
+                  <p>
+                    The point using lorem ipsum that it have often more-or-less
+                    normal distribution of the letter.
+                  </p>
+                  <div class="cards__outter__card__link">
+                    <a href="#">
+                      Learn More
+                      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="cards__outter__card">
+                  <div class="cards__outter__card__icon">
+                    <span><i class="bi bi-filter"></i></span>
+                  </div>
+                  <h3>Improve Rankings</h3>
+                  <p>
+                    The point using lorem ipsum that it have often more-or-less
+                    normal distribution of the letter.
+                  </p>
+                  <div class="cards__outter__card__link">
+                    <a href="#">
+                      Learn More
+                      <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer style="background-image: url(../src/assets/footer-bg-min.jpeg)">
+      <div class="container-xxl">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6">
+            <div class="element-main_info padding-20">
+              <div class="element-main_info__logo">
+                <img src="../src/assets/Logo.svg" alt="XStore" />
+              </div>
+              <p>
+                SEO is a digital marketing strategy that helps your website
+                appear in relevant search results.
+              </p>
+              <p>
+                It involves various techniques from using to keywords on your
+                page to earning links to your site.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="quick_links padding-20">
+              <h3><a href="#">Quick Links</a></h3>
+              <ul class="quick_links__list">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Article</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="contact padding-20">
+              <h3><a href="#">Contact Us</a></h3>
+              <ul class="contact__list">
+                <li>
+                  <span><i class="bi bi-geo-alt-fill"></i></span>
+                  <span>5 Hillcrest Lane, Irvine, Brazil, United States</span>
+                </li>
+                <li>
+                  <span><i class="bi bi-telephone"></i></span>
+                  <span>+2 1800 5460 8764</span>
+                </li>
+                <li>
+                  <span><i class="bi bi-envelope"></i></span>
+                  <span>xstoreseo@example.com</span>
+                </li>
+                <li>
+                  <span><i class="bi bi-globe2"></i></span>
+                  <span>www.xstoreseo.com</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="social padding-20">
+              <h3><a href="#">Follow Us</a></h3>
+              <ul class="social__icons">
+                <li>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-youtube"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-telegram"></i></a>
+                </li>
+              </ul>
+              <form action="#">
+                <div class="form">
+                  <label for="email">Signup Newsletter</label>
+                  <div class="form__input">
+                    <div class="form__input__mail">
+                      <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email address"
+                        required
+                      />
+                    </div>
+                    <div class="plus-icon">
+                      <button>
+                        <i class="bi bi-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="footer-bottom">
+            <div class="footer-bottom__copy_right padding-20">
+              Copyright © 2023
+              <a class="text-decoration-underline" href="#">XStore theme</a>.
+              Created by 8theme –
+              <a class="text-decoration-underline" href="#"
+                >WordPress WooCommerce themes</a
+              >.
+            </div>
+            <div class="footer-bottom__terms padding-20">
+              <span><a href="#">Terms and Conditions</a></span>
+              <span><a href="#">Privacy Policy</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/f571095b3b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../src/js/navbar.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

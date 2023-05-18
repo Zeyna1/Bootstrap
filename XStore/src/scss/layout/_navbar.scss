@@ -1,0 +1,176 @@
+@use "../utils/variable" as *;
+@use "../utils/mixin" as *;
+@use "../utils/extend" as *;
+@use "../utils/function" as *;
+@use "../utils/keyFrames" as *;
+
+$classes: logo, list, list__group, list__group__item, sidebar_icon;
+@each $class in $classes {
+  .#{$class} {
+    height: 100%;
+  }
+}
+
+header {
+  @include position(sticky, $top: 0);
+  z-index: 1000;
+  .logo {
+    @include flexbox(center, start, wrap, 0);
+    a {
+      width: 169px;
+      height: 38px;
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+  .navbar-top {
+    box-shadow: $navbar-shadow;
+    font-size: $fs-100;
+    .row {
+      min-height: 90px;
+    }
+    .list {
+      font-weight: 500;
+      &__group {
+        @include flexbox(center, center, wrap, 0);
+        position: relative;
+        padding: 0;
+        .line {
+          @include position(absolute, $top: 1px, $left: 0);
+          background-color: $blue2-clr;
+          width: calc(100% / 6);
+          height: 2px;
+          transition: $transition;
+        }
+
+        &__item {
+          flex-basis: calc(100% / 6);
+
+          &:nth-child(2):hover ~ .line {
+            left: calc(100% / 6);
+          }
+
+          &:nth-child(3):hover ~ .line {
+            left: calc(100% / 6 * 2);
+          }
+
+          &:nth-child(4):hover ~ .line {
+            left: calc(100% / 6 * 3);
+          }
+
+          &:nth-child(5):hover ~ .line {
+            left: calc(100% / 6 * 4);
+          }
+
+          &:nth-child(6):hover ~ .line {
+            left: calc(100% / 6 * 5);
+          }
+
+          a {
+            @extend .list__group;
+            overflow: hidden;
+            transition: $transition;
+
+            &:hover {
+              color: $blue2-clr;
+            }
+          }
+        }
+        .active {
+          a {
+            color: $blue2-clr !important;
+          }
+        }
+      }
+    }
+    .buttons {
+      @extend .logo;
+      justify-content: space-between;
+
+      &__login {
+        margin: 0 auto;
+        &__button {
+          @include flexbox(center, space-between, wrap, 0.5rem);
+          transition: $transition;
+          font-weight: 600;
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+
+      &__register {
+        &__button {
+          padding: 12px 40px;
+          font-weight: 700;
+          color: $white_clr;
+          background-color: $blue2-clr;
+          transition: $transition;
+
+          &:hover {
+            background-color: $dark-blue-clr;
+          }
+        }
+      }
+    }
+  }
+  .navbar-bottom_resp {
+    &__top {
+      box-shadow: $navbar-shadow;
+      @include position(fixed, $top: 0, $left: 0);
+      width: 100%;
+      .row {
+        min-height: 60px;
+        .sidebar_icon {
+          font-size: 25px;
+          @include flexbox(center, start, wrap, 0);
+        }
+        .logo {
+          justify-content: center;
+        }
+      }
+    }
+    &__bottom {
+      box-shadow: $navbar-shadow;
+      @include position(fixed, $bottom: 0, $left: 0);
+      width: 100%;
+      .row {
+        min-height: 66px;
+        justify-content: center;
+        align-items: center;
+        .items {
+          @include flexbox(center, center, wrap, 0, $direction: column);
+          transition: $transition;
+          &:hover {
+            color: $blue2-clr;
+          }
+
+          span {
+            font-size: 12.75px;
+            font-weight: 600;
+            &:has(i) {
+              font-size: 21px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .navbar-top {
+      display: none;
+    }
+  }
+
+  // @media (max-width: 992px) {
+  //   .navbar-top {
+  //     display: none;
+  //   }
+  //   .navbar-bottom_resp {
+  //     display: block;
+  //   }
+  // }
+}

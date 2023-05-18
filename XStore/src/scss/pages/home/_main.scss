@@ -1,0 +1,174 @@
+@use "../../utils/variable" as *;
+@use "../../utils/mixin" as *;
+@use "../../utils/extend" as *;
+@use "../../utils/function" as *;
+@use "../../utils/keyFrames" as *;
+
+.outer {
+  @include flexbox(center, start, wrap, 0);
+  height: 100%;
+  .content {
+    @extend .outer;
+    gap: 2rem;
+    padding: 15px;
+    &__info {
+      h1 {
+        font-size: $fs-300;
+        color: #26323859;
+        font-weight: 500;
+      }
+      h2 {
+        font-size: $fs-900;
+        font-weight: 700;
+        span {
+          color: $blue2-clr;
+        }
+      }
+      p {
+        font-size: $fs-100;
+        color: $gray-clr;
+      }
+    }
+    &__buttons {
+      @include flexbox(center, space-between, wrap, 20px);
+      flex: 100%;
+      &__button {
+        flex-grow: 1;
+        &__default-btn {
+          background-color: $dark-blue-clr;
+          border-radius: 5px;
+          position: relative;
+          &:hover {
+            &::after {
+              width: 100%;
+            }
+          }
+
+          &::after {
+            @extend %default-btn_hover;
+            background-color: $blue2-clr;
+          }
+          span {
+            @extend %default-btn;
+            color: $white_clr;
+          }
+        }
+        &__play-btn {
+          span {
+            width: 186px;
+            height: 45px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#main {
+  margin: 20px 0;
+  padding: 50px 0 100px;
+  background-size: cover;
+  background-repeat: repeat-x;
+  height: 845px;
+  .img_outer {
+    @extend .outer;
+    align-items: stretch;
+    &__holder {
+      position: relative;
+      padding: 15px;
+      &__img {
+        @include position(absolute, $inset: 0);
+        animation: translate 2.5s alternate infinite ease-in-out both;
+
+        &:nth-child(1) {
+          z-index: 1;
+          height: 648px;
+          width: 800px;
+        }
+        &:nth-child(2) {
+          z-index: 3;
+          width: 625px;
+          height: 500px;
+        }
+        &:nth-child(3) {
+          animation-name: translate-2;
+          z-index: 2;
+          width: 700px;
+          height: 500px;
+        }
+        img {
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1400px) {
+    .img_outer {
+      &__holder {
+        &__img {
+          &:nth-child(1) {
+            z-index: 1;
+            height: 500px;
+            width: 650px;
+          }
+          &:nth-child(2) {
+            z-index: 3;
+            width: 470px;
+            height: 350px;
+          }
+          &:nth-child(3) {
+            animation-name: translate-2;
+            z-index: 2;
+            width: 550px;
+            height: 350px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .img_outer {
+      &__holder {
+        &__img {
+          &:nth-child(1) {
+            z-index: 1;
+            height: 400px;
+            width: 550px;
+          }
+          &:nth-child(2) {
+            z-index: 3;
+            width: 370px;
+            height: 250px;
+          }
+          &:nth-child(3) {
+            animation-name: translate-2;
+            z-index: 2;
+            width: 450px;
+            height: 250px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    height: auto;
+    text-align: center;
+    .col-md-7 {
+      display: none;
+    }
+    .outer {
+      justify-content: center;
+    }
+  }
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 56px !important;
+    }
+  }
+  @media (max-width: 575px) {
+    .content__buttons__button {
+      flex: 100%;
+    }
+  }
+}

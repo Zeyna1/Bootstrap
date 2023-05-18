@@ -1,0 +1,69 @@
+@use "../../utils/variable" as *;
+@use "../../utils/mixin" as *;
+@use "../../utils/extend" as *;
+@use "../../utils/function" as *;
+
+#booking {
+  margin-top: 50px;
+  .bg_element {
+    width: 100%;
+    @include bg-img(cover, no-repeat);
+    font-size: $fs-100;
+    border-radius: 5px;
+
+    &__outer {
+      padding: 20px 30px;
+      width: 100%;
+      @include flexbox(center, space-between, wrap, 0);
+      &__content {
+        @include flexbox(start, center, wrap, 0, $direction: column);
+        color: $white_clr;
+        flex: 65%;
+        h2 {
+          font-size: $fs-700;
+        }
+      }
+
+      &__button {
+        flex: 35%;
+        text-align: end;
+        button {
+          position: relative;
+          border-radius: 5px;
+          background: linear-gradient(270deg, #ffffff 0%, #ffffff 100%);
+          &:hover {
+            .span {
+              color: $white_clr;
+            }
+            &::after {
+              width: 100%;
+            }
+          }
+
+          &::after {
+            @extend %default-btn_hover;
+            background-color: $dark-gray-clr;
+          }
+
+          .span {
+            color: $dark-gray-clr;
+            @extend %default-btn;
+            span {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .bg_element__outer__content {
+      align-items: center;
+      flex: 100%;
+    }
+    .bg_element__outer__button {
+      text-align: center;
+      flex: 100%;
+    }
+  }
+}

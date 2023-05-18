@@ -1,0 +1,144 @@
+@use "../utils/variable" as *;
+@use "../utils/mixin" as *;
+@use "../utils/extend" as *;
+
+footer {
+  font-size: $fs-100;
+  color: $white_clr;
+  background-size: cover;
+  background-position: center center;
+  ul {
+    align-items: stretch;
+  }
+
+  .row {
+    align-items: stretch;
+
+    margin: 60px 0 50px;
+  }
+  .padding-20 {
+    padding: 20px;
+  }
+  h3 {
+    font-size: $fs-200;
+    font-weight: 600;
+    a {
+      color: inherit !important;
+    }
+  }
+  a {
+    transition: $transition;
+    &:hover {
+      color: $blue-clr;
+    }
+  }
+
+  .element-main_info {
+    @include flexbox(stretch, start, wrap, 20px);
+    height: 100%;
+    &__logo {
+      width: 169px;
+      height: 38px;
+    }
+  }
+
+  .quick_links {
+    @extend .element-main_info;
+    gap: 25px;
+    &__list {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: 100%;
+      li {
+        flex: 100%;
+      }
+    }
+  }
+
+  .contact {
+    @extend .element-main_info;
+    &__list {
+      @extend .element-main_info;
+      flex-direction: column;
+      height: 100%;
+      flex-wrap: wrap;
+      li {
+        @include flexbox(start, start, nowrap, 15px);
+      }
+    }
+  }
+
+  .social {
+    @extend .element-main_info;
+
+    &__icons {
+      flex: 100%;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 1.5rem;
+    }
+
+    form {
+      width: 100%;
+
+      .form {
+        @include flexbox(center, space-between, wrap, 25px);
+        label {
+          width: 100%;
+          font-weight: 700;
+          font-size: $fs-200;
+        }
+
+        &__input {
+          @extend .form;
+          flex-wrap: nowrap;
+          border: 1px solid rgba(255, 255, 255, 0.5) !important;
+          border-radius: 5px;
+          height: 50px;
+
+          &__mail {
+            input {
+              background: none !important;
+              color: hsl(0, 0%, 100%);
+              padding: 0 17px;
+              background: none;
+
+              &::placeholder {
+                color: hsl(0, 0%, 70%);
+                font-size: 14px;
+                background: none;
+                line-clamp: 3;
+              }
+            }
+          }
+
+          .plus-icon {
+            padding: 8px;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    @include flexbox(center, space-between, wrap, 0);
+
+    &__terms {
+      span:nth-child(1) {
+        position: relative;
+        margin-right: 20px;
+        &::after {
+          @include before_after("", 1px, 90%, hsl(0, 0%, 50%));
+          @include position(absolute, $top: 10%, $right: -10px);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .element-main_info {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  }
+}

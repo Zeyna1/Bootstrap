@@ -1,0 +1,51 @@
+@use "../../utils/variable" as *;
+@use "../../utils/mixin" as *;
+@use "../../utils/extend" as *;
+@use "../../utils/function" as *;
+
+#sponsors {
+  a {
+    width: 164px;
+    height: 43px;
+    opacity: 0.4;
+    transition: $transition;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .sponsor_list {
+    @include flexbox(center, space-between, nowrap, 0);
+
+    &__items {
+      @extend .sponsor_list;
+      width: 100%;
+    }
+  }
+  .col-12:last-child {
+    display: none;
+    .carousel-item {
+      text-align: center;
+    }
+  }
+  @media (max-width: 1200px) {
+    li:nth-child(1),
+    li:nth-child(2) {
+      display: none;
+    }
+  }
+  @media (max-width: 992px) {
+    li:nth-child(3),
+    li:nth-child(4) {
+      display: none;
+    }
+  }
+  @media (max-width: 575px) {
+    .col-12:first-child {
+      display: none;
+    }
+    .col-12:last-child {
+      display: block;
+    }
+  }
+}

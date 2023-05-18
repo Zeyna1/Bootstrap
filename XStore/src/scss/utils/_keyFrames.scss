@@ -1,0 +1,38 @@
+@use "variable.scss" as *;
+@use "mixin" as *;
+@use "extend" as *;
+
+@keyframes translate {
+  0% {
+    transform: translate(-15px, -15px);
+  }
+  100% {
+    transform: translate(15px, 15px);
+  }
+}
+
+@keyframes translate-2 {
+  0% {
+    transform: translate(-11px, -11px);
+  }
+  100% {
+    transform: translate(11px, 11px);
+  }
+}
+@keyframes translate-3 {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes translate-out {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
