@@ -113,8 +113,14 @@ input {
   height: 100%;
 }
 
-h1 {
+h1,
+h2 {
   font-size: 5.625rem;
+  color: #19082d;
+}
+
+h2 {
+  font-size: 3.125rem;
 }
 
 ul {

@@ -1,5 +1,6 @@
 @use "function" as *;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+// Font-sizes
 $fs-100: toRem(14);
 $fs-200: toRem(15);
 $fs-300: toRem(18);
@@ -16,16 +17,17 @@ $fs-primary: $fs-300;
 $fs-h1: $fs-1100;
 $fs-h2: $fs-1000;
 
+// Colors
 $purple-clr: #6722b5;
+$purple-soft-clr: #372748;
 $purple-dark-clr: #19082d;
-$dark-gray-clr: #2f3238;
-$dark-blue-clr: #263238;
-$gray-clr: #5d5d5d;
-$gray2-clr: #737373;
-$light-gray-clr: #bfbfbf;
-$white2_clr: #ced2d5;
-$white_clr: #fff;
-$green_clr: #00e18f;
+$blue-dark-clr: #1d1c2d;
+$dark-gray-clr: #3e3e3e;
+$orange-clr: #ff7425;
+$white-soft-clr: #bcbbbb;
+
+$primary-clr: $purple-clr;
+$secondary-clr: $purple-dark-clr;
 
 $default_ff: "Poppins", sans-serif;
 

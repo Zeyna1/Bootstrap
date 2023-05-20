@@ -38,6 +38,11 @@ input {
 }
 h1 {
   font-size: $fs-h1;
+  color: $secondary-clr;
+}
+h2 {
+  font-size: $fs-h2;
+  @extend h1;
 }
 
 // section {
