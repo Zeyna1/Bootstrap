@@ -1,0 +1,34 @@
+@use "function" as *;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+$fs-100: toRem(14);
+$fs-200: toRem(15);
+$fs-300: toRem(18);
+$fs-400: toRem(20);
+$fs-500: toRem(22);
+$fs-600: toRem(23);
+$fs-700: toRem(25);
+$fs-800: toRem(30);
+$fs-900: toRem(45);
+$fs-1000: toRem(50);
+$fs-1100: toRem(90);
+
+$fs-primary: $fs-300;
+$fs-h1: $fs-1100;
+$fs-h2: $fs-1000;
+
+$purple-clr: #6722b5;
+$purple-dark-clr: #19082d;
+$dark-gray-clr: #2f3238;
+$dark-blue-clr: #263238;
+$gray-clr: #5d5d5d;
+$gray2-clr: #737373;
+$light-gray-clr: #bfbfbf;
+$white2_clr: #ced2d5;
+$white_clr: #fff;
+$green_clr: #00e18f;
+
+$default_ff: "Poppins", sans-serif;
+
+$transition: all 0.25s ease-in-out;
+
+$navbar-shadow: 2px 0 12px 0 rgba(0, 0, 0, 0.15);

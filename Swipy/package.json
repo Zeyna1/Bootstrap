@@ -1,0 +1,19 @@
+{
+  "name": "swipy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch --update ./src/scss/style.scss ./src/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.0-alpha3",
+    "bootstrap-icons": "^1.10.5",
+    "node-sass": "^9.0.0",
+    "sass": "^1.62.1"
+  }
+}

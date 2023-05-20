@@ -1,0 +1,11 @@
+@use "./variable" as *;
+@use "./mixin" as *;
+
+%default-btn {
+  padding: 1rem 2rem;
+  font-weight: 600;
+  font-size: $fs-100;
+  position: relative;
+  z-index: 1;
+  transition: $transition;
+}
